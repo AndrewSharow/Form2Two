@@ -1,0 +1,6 @@
+.ContactItem {
+  min-width: 14vw;
+  min-height: 16vh;
+  border: 1px solid black;
+  border-radius: 12px;
+}

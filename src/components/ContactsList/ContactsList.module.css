@@ -1,0 +1,6 @@
+.ContactsList {
+  margin: 1vh 2vw;
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
