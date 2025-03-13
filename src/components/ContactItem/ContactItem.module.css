@@ -13,14 +13,23 @@
 .contactInfo {
   display: flex;
   flex-direction: column;
+  gap: 0.1em;
 }
 
 .contactName {
   font-weight: bold;
 }
+.contactName span {
+  margin: 0 0.2em;
+  vertical-align: middle;
+}
 
 .contactPhone {
   color: #555;
+}
+.contactPhone span {
+  margin: 0 0.2em;
+  vertical-align: middle;
 }
 
 .deleteButton {

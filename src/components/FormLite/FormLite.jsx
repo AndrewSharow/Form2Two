@@ -17,10 +17,12 @@ const FormLite = ({ setcontactList }) => {
 
   const formSubmit = (e) => {
     e.preventDefault();
-    setcontactList((prev) => {
-      return [...prev, { contactId: nanoid(), ...userData }];
-    });
-    setuserData(userDataTemplate);
+    if (userData.contactName && userData.contactPhoneNumber) {
+      setcontactList((prev) => {
+        return [...prev, { contactId: nanoid(), ...userData }];
+      });
+      setuserData(userDataTemplate);
+    }
   };
 
   return (

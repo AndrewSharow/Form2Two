@@ -4,12 +4,9 @@ import s from "./ContactsList.module.css";
 
 const ContactsList = ({ contactList, setcontactList }) => {
   const handleDeleteItem = (contactId) => {
-    setcontactList((prev) => {
-      prev.filter((item) => {
-        item.contactId !== contactId;
-      });
-      console.log("prev", prev);
-    });
+    setcontactList((prev) =>
+      prev.filter((item) => item.contactId !== contactId)
+    );
   };
   return (
     <div className={s.ContactsList}>

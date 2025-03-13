@@ -12,11 +12,11 @@ const ContactItem = ({
       <div className={s.contactInfo}>
         <span className={s.contactName}>
           <img className={s.icon} src="../../icons/contactCard.png" />
-          {contactName}
+          <span>{contactName}</span>
         </span>
         <span className={s.contactPhone}>
           <img className={s.icon} src="../../icons/phone.png" />
-          {contactPhoneNumber}
+          <span>{contactPhoneNumber}</span>
         </span>
       </div>
       <button
