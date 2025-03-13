@@ -2,12 +2,26 @@ import React from "react";
 import ContactItem from "../ContactItem/ContactItem";
 import s from "./ContactsList.module.css";
 
-const ContactsList = () => {
+const ContactsList = ({ contactList, setcontactList }) => {
+  const handleDeleteItem = (contactId) => {
+    setcontactList((prev) => {
+      prev.filter((item) => {
+        item.contactId !== contactId;
+      });
+      console.log("prev", prev);
+    });
+  };
   return (
     <div className={s.ContactsList}>
-      <ContactItem />
-      <ContactItem />
-      <ContactItem />
+      {contactList.map((contact) => {
+        return (
+          <ContactItem
+            key={contact.contactId}
+            {...contact}
+            handleDeleteItem={handleDeleteItem}
+          />
+        );
+      })}
     </div>
   );
 };

@@ -1,0 +1,17 @@
+[
+  {
+    "contactId": 32321123,
+    "contactName": "contact1",
+    "contactPhoneNumber": "+123456789"
+  },
+  {
+    "contactId": 3243123,
+    "contactName": "contact2",
+    "contactPhoneNumber": "+099999999"
+  },
+  {
+    "contactId": 32131321453,
+    "contactName": "contact3",
+    "contactPhoneNumber": "+093213129999"
+  }
+]

@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import s from "./FormLite.module.css";
-const FormLite = () => {
-  const userDataTRemplate = {
+import { nanoid } from "nanoid";
+const FormLite = ({ setcontactList }) => {
+  const userDataTemplate = {
     contactName: "",
-    phoneNumber: "",
+    contactPhoneNumber: "",
   };
-  const [userData, setuserData] = useState(userDataTRemplate);
+  const [userData, setuserData] = useState(userDataTemplate);
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
@@ -16,7 +17,10 @@ const FormLite = () => {
 
   const formSubmit = (e) => {
     e.preventDefault();
-    setuserData(userDataTRemplate);
+    setcontactList((prev) => {
+      return [...prev, { contactId: nanoid(), ...userData }];
+    });
+    setuserData(userDataTemplate);
   };
 
   return (
@@ -32,8 +36,8 @@ const FormLite = () => {
       <label>
         <span>Номер телефона</span>
         <input
-          value={userData.phoneNumber}
-          name="phoneNumber"
+          value={userData.contactPhoneNumber}
+          name="contactPhoneNumber"
           onChange={handleChangeInput}
         />
       </label>
