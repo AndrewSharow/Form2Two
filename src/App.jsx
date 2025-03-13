@@ -3,12 +3,14 @@ import "./App.css";
 import ContactsList from "./components/ContactsList/ContactsList";
 import FormLite from "./components/FormLite/FormLite";
 import contactTemplate from "./assets/base_contacts.json";
+import FormHard from "./components/FormHard/FormHard";
 
 function App() {
   const [contactList, setcontactList] = useState(contactTemplate);
   return (
     <>
-      <FormLite setcontactList={setcontactList} />
+      {/* <FormLite setcontactList={setcontactList} /> */}
+      <FormHard></FormHard>
       <hr />
       <ContactsList contactList={contactList} setcontactList={setcontactList} />
     </>
