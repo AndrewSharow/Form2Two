@@ -6,7 +6,7 @@
   display: inline-block;
   position: relative;
 
-  & label {
+  & .labelForm {
     width: 18vw;
     position: relative;
     display: flex;
@@ -34,6 +34,18 @@
     font-size: 16px;
     outline: none;
     transition: 0.3s ease-in-out;
+  }
+  & .radioGender {
+    margin: 1.3rem;
+    display: flex;
+    gap: 1rem;
+    place-content: center;
+  }
+  & .agreementLabel {
+    display: flex;
+    gap: 0.4rem;
+    vertical-align: center;
+    margin-bottom: 0.6rem;
   }
 }
 
