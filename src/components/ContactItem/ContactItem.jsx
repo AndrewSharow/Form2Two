@@ -6,6 +6,9 @@ const ContactItem = ({
   contactName,
   contactPhoneNumber,
   handleDeleteItem,
+  contactCity,
+  contactType,
+  contactGender,
 }) => {
   return (
     <div className={s.ContactItem}>
@@ -17,6 +20,18 @@ const ContactItem = ({
         <span className={s.contactPhone}>
           <img className={s.icon} src="../../icons/phone.png" />
           <span>{contactPhoneNumber}</span>
+        </span>
+        <span className={s.contactPhone}>
+          <img className={s.icon} src="../../icons/city.png" />
+          <span>{contactCity}</span>
+        </span>
+        <span className={s.contactPhone}>
+          <img className={s.icon} src="../../icons/type.png" />
+          <span>Тип: {contactType}</span>
+        </span>
+        <span className={s.contactPhone}>
+          <img className={s.icon} src="../../icons/gender.png" />
+          <span>Стать: {contactGender}</span>
         </span>
       </div>
       <button
