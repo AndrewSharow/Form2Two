@@ -48,6 +48,9 @@
     margin-bottom: 0.6rem;
   }
 }
+.errorMessage {
+  color: darkred;
+}
 
 .ButtonAdd {
   width: 100%;
@@ -69,5 +72,12 @@
   &:active {
     background-color: #00408a;
     transform: scale(0.98);
+  }
+  &:disabled {
+    background-color: gray;
+    color: lightgray;
+    cursor: not-allowed;
+    opacity: 0.5;
+    transform: scale(1);
   }
 }
