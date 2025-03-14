@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       {/* <FormLite setcontactList={setcontactList} /> */}
-      <FormHard></FormHard>
+      <FormHard setcontactList={setcontactList}></FormHard>
       <hr />
       <ContactsList contactList={contactList} setcontactList={setcontactList} />
     </>
